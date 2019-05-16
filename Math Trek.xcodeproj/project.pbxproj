@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0640EEF72262671900C20AAC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0640EEF62262671900C20AAC /* SecondViewController.swift */; };
+		065746CE2276219F001AA97A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 065746CC2276219F001AA97A /* Main.storyboard */; };
 		0670E3F02260FFD000F2A013 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0670E3EF2260FFD000F2A013 /* AppDelegate.swift */; };
 		0670E3F22260FFD000F2A013 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0670E3F12260FFD000F2A013 /* ViewController.swift */; };
-		0670E3F52260FFD000F2A013 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0670E3F32260FFD000F2A013 /* Main.storyboard */; };
 		0670E3F72260FFD200F2A013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0670E3F62260FFD200F2A013 /* Assets.xcassets */; };
 		0670E3FA2260FFD200F2A013 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0670E3F82260FFD200F2A013 /* LaunchScreen.storyboard */; };
 		0670E4052260FFD200F2A013 /* Math_TrekTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0670E4042260FFD200F2A013 /* Math_TrekTests.swift */; };
 		0670E4102260FFD200F2A013 /* Math_TrekUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0670E40F2260FFD200F2A013 /* Math_TrekUITests.swift */; };
+		06B47E952273995F00D34CBB /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B47E942273995F00D34CBB /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0640EEF62262671900C20AAC /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		065746CD2276219F001AA97A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0670E3EC2260FFD000F2A013 /* Math Trek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Math Trek.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0670E3EF2260FFD000F2A013 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0670E3F12260FFD000F2A013 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0670E3F42260FFD000F2A013 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0670E3F62260FFD200F2A013 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0670E3F92260FFD200F2A013 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0670E3FB2260FFD200F2A013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		0670E40B2260FFD200F2A013 /* Math TrekUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Math TrekUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0670E40F2260FFD200F2A013 /* Math_TrekUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math_TrekUITests.swift; sourceTree = "<group>"; };
 		0670E4112260FFD200F2A013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06B47E942273995F00D34CBB /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +103,9 @@
 			children = (
 				0670E3EF2260FFD000F2A013 /* AppDelegate.swift */,
 				0670E3F12260FFD000F2A013 /* ViewController.swift */,
-				0670E3F32260FFD000F2A013 /* Main.storyboard */,
+				0640EEF62262671900C20AAC /* SecondViewController.swift */,
+				06B47E942273995F00D34CBB /* ThirdViewController.swift */,
+				065746CC2276219F001AA97A /* Main.storyboard */,
 				0670E3F62260FFD200F2A013 /* Assets.xcassets */,
 				0670E3F82260FFD200F2A013 /* LaunchScreen.storyboard */,
 				0670E3FB2260FFD200F2A013 /* Info.plist */,
@@ -193,13 +199,16 @@
 				TargetAttributes = {
 					0670E3EB2260FFD000F2A013 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					0670E3FF2260FFD200F2A013 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 0670E3EB2260FFD000F2A013;
 					};
 					0670E40A2260FFD200F2A013 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 0670E3EB2260FFD000F2A013;
 					};
 				};
@@ -229,9 +238,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				065746CE2276219F001AA97A /* Main.storyboard in Resources */,
 				0670E3FA2260FFD200F2A013 /* LaunchScreen.storyboard in Resources */,
 				0670E3F72260FFD200F2A013 /* Assets.xcassets in Resources */,
-				0670E3F52260FFD000F2A013 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0640EEF72262671900C20AAC /* SecondViewController.swift in Sources */,
 				0670E3F22260FFD000F2A013 /* ViewController.swift in Sources */,
+				06B47E952273995F00D34CBB /* ThirdViewController.swift in Sources */,
 				0670E3F02260FFD000F2A013 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,10 +304,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0670E3F32260FFD000F2A013 /* Main.storyboard */ = {
+		065746CC2276219F001AA97A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0670E3F42260FFD000F2A013 /* Base */,
+				065746CD2276219F001AA97A /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -432,17 +443,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FYFN99S5JE;
 				INFOPLIST_FILE = "Math Trek/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Internet-Kids.Math-Trek";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Internet-Kids.Math-Trek";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -450,17 +464,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FYFN99S5JE;
 				INFOPLIST_FILE = "Math Trek/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Internet-Kids.Math-Trek";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Internet-Kids.Math-Trek";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -479,7 +496,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Internet-Kids.Math-TrekTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Math Trek.app/Math Trek";
 			};
@@ -500,7 +517,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Internet-Kids.Math-TrekTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Math Trek.app/Math Trek";
 			};
@@ -520,7 +537,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Internet-Kids.Math-TrekUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Math Trek";
 			};
@@ -540,7 +557,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Internet-Kids.Math-TrekUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Math Trek";
 			};
