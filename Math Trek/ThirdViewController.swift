@@ -30,7 +30,7 @@ class ThirdViewController : UIViewController {
     
     @IBAction func sharePressed(_ sender: Any) {
         
-        let activityVC = UIActivityViewController(activityItems:[ "Test your artithmatic! Download Math Trek on the App Store. It's Free!"], applicationActivities: nil)
+        let activityVC = UIActivityViewController(activityItems:[ "Sharpen your math skills. Download Math Trek on the App Store. It's Free! https://itunes.apple.com/gb/app/math-trek/id1464019141?mt=8"], applicationActivities: nil)
         activityVC.popoverPresentationController?.sourceView = self.view
         
         self.present(activityVC,animated: true, completion: nil )

@@ -7,13 +7,15 @@
 //
 import Foundation
 import UIKit
+import AVFoundation
 class SecondViewController: UIViewController{
     
-  
+    var soundEffect1 = AVAudioPlayer()
+    var soundEffect2 = AVAudioPlayer()
+    
+
 
     //Labels
-    
-   
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
     
@@ -33,6 +35,122 @@ class SecondViewController: UIViewController{
                   133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150]
     
     
+    
+    //Timer Format
+    func timeFormatted(_ totalSeconds: Int) -> String {
+        let seconds: Int = totalSeconds % 60
+        let minutes: Int = (totalSeconds / 60) % 60
+        //     let hours: Int = totalSeconds / 3600
+        // connect value of timer to timeformarred
+        return String(format:"%02d:%02d", minutes, seconds)
+    }
+    
+    @objc func countdown (){
+        if valueToInt > 0 {
+            valueToInt -= 1
+            
+        }
+        else{
+            endTimer()
+            
+        }
+        timerLabel.text = timeFormatted(valueToInt)
+        
+    }
+    
+    
+    
+    func startTimer() {
+        countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector (SecondViewController.countdown), userInfo: nil, repeats: true)
+        countdown()
+        if countdownTimer .isValid == true{
+            // warningNotification()
+            
+            print ("TIMER IS RUNNING")
+            
+        }
+        
+    }
+    
+    
+    @objc func endTimer() {
+        countdownTimer.invalidate()
+        valueToInt = 50
+        timerLabel.text = timeFormatted(valueToInt)
+        if countdownTimer.isValid == false {
+            print("TIMER IS NOT RUNNING")
+            performSegue(withIdentifier: "gameOver", sender: self)
+            
+            
+            
+        }
+    }
+    
+    
+    
+    func makeQuestion () {
+        
+        let factor: String!
+        
+        let numbers = [ 1,2,3,4,5,6,7,8,9,10,11,12]
+        
+        let a = numbers.randomElement()!
+        let b = numbers.randomElement()!
+        
+        let add :Int = (a + b)
+        let subtract :Int = (a - b)
+        let multiply :Int = (a * b)
+        
+        let questions = [add,subtract,multiply]
+        
+        let ans = questions.randomElement()!
+        
+        if ans == add {
+            
+            factor = "+"
+            
+            
+        } else if ans == subtract {
+            
+            factor = "-"
+            
+        } else {
+            
+            factor = "x"
+        }
+        
+        print("\(a) \(String(factor)) \(b) = \(ans)")
+        
+        let answerString :String = String(ans)
+
+        questionLabel.text = "\(a) \(String(factor)) \(b)"
+    
+        rightAnswerPlacement = Int.random(in: 1 ..< 5)
+        
+        //Creat a Button
+        var button: UIButton = UIButton()
+        
+        for i in 1...4
+        {
+            //Create Button
+            button = view.viewWithTag(i) as! UIButton
+            
+            if (i==Int(rightAnswerPlacement)){
+                
+                button.setTitle(answerString, for: .normal)
+            }else{
+                
+                button.setTitle("\(answers.randomElement()!)", for: .normal)
+                
+                
+                
+            }
+        }
+        
+        
+    }
+    
+    
     @IBAction func answerPressed(_ sender: Any) {
         
         if (sender as AnyObject).tag == rightAnswerPlacement{
@@ -40,11 +158,15 @@ class SecondViewController: UIViewController{
             print("correct!")
             makeQuestion()
             score += 1
+            soundEffect1.play()
+        
         }else{
             
             print("wrong!")
             print("score = \(score)")
+            soundEffect2.play()
             performSegue(withIdentifier: "gameOver", sender: self)
+            
             
         }
         
@@ -72,141 +194,19 @@ class SecondViewController: UIViewController{
         }
         
     }
-        
-       
     
-        
-    //Timer Format
-    func timeFormatted(_ totalSeconds: Int) -> String {
-        let seconds: Int = totalSeconds % 60
-        let minutes: Int = (totalSeconds / 60) % 60
-        //     let hours: Int = totalSeconds / 3600
-        // connect value of timer to timeformarred
-        return String(format:"%02d:%02d", minutes, seconds)
-    }
-    
-    
-    
-    
-    func startTimer() {
-        countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector (SecondViewController.countdown), userInfo: nil, repeats: true)
-        countdown()
-        if countdownTimer .isValid == true{
-            // warningNotification()
-            
-            print ("TIMER IS RUNNING")
-            
-        }
-        
-    }
-    
-    
-    @objc func countdown (){
-        if valueToInt > 0 {
-            valueToInt -= 1
-            
-        }
-        else{
-            endTimer()
-            
-        }
-        timerLabel.text = timeFormatted(valueToInt)
-        
-    }
-    
- 
-    
-    
-    @objc func endTimer() {
-        countdownTimer.invalidate()
-        valueToInt = 50
-        timerLabel.text = timeFormatted(valueToInt)
-        if countdownTimer.isValid == false {
-            print("TIMER IS NOT RUNNING")
-            performSegue(withIdentifier: "gameOver", sender: self)
-       
-          
-        
-        }
-    }
-    
-    func makeQuestion () {
-        
-        let factor: String!
-        
-        let numbers = [ 1,2,3,4,5,6,7,8,9,10,11,12]
-        
-        let a = numbers.randomElement()!
-        let b = numbers.randomElement()!
-        
-        
-            let add :Int = (a + b)
-            let subtract :Int = (a - b)
-            let multiply :Int = (a * b)
-        
-    
-        let questions = [add,subtract,multiply]
-    
-        let ans = questions.randomElement()!
-        
-        if ans == add {
-            
-            factor = "+"
-            
-            
-        } else if ans == subtract {
-           
-                factor = "-"
-            
-        } else {
-    
-                factor = "x"
-                }
 
-       print("\(a) \(String(factor)) \(b) = \(ans)")
-        
-        let answerString :String = String(ans)
-    //    print(answerString)
-        
-
-        
-       // print("\(a) x \(b) = \(multiplyString)")
-        
-        questionLabel.text = "\(a) \(String(factor)) \(b)"
-    
-        
-        rightAnswerPlacement = Int.random(in: 1 ..< 5)
-        
-        //Creat a Button
-        var button: UIButton = UIButton()
-        
-        for i in 1...4
-        {
-            //Create Button
-            button = view.viewWithTag(i) as! UIButton
-            
-            if (i==Int(rightAnswerPlacement)){
-                
-                button.setTitle(answerString, for: .normal)
-            }else{
-                
-                button.setTitle("\(answers.randomElement()!)", for: .normal)
-    
-    
-            }
-        }
-            
-            
-    }
-    
- 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let vc = segue.destination as! ThirdViewController
         vc.scoreString =  "\(score)"
-        vc.highscoreString = String(recordData)
         
+        if recordData != nil{
+            
+        vc.highscoreString = String(recordData)
+            
+        }
         
     }
    
@@ -219,8 +219,22 @@ class SecondViewController: UIViewController{
         let userDefaults = Foundation.UserDefaults.standard
         let value = userDefaults.string(forKey: "Record")
         recordData = value
- 
+        
+        
+        let correctSound = Bundle.main.path(forResource: "correct", ofType: "mp3")
+        let wrongSound = Bundle.main.path(forResource: "wrong", ofType: "mp3")
+        
+        do{
+            
+            soundEffect1 = try AVAudioPlayer(contentsOf: URL(fileURLWithPath:correctSound!))
+            soundEffect2 = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: wrongSound!))
         }
+        catch{
+            print(error)
+        }
+    
+ 
+    }
 
 
 }

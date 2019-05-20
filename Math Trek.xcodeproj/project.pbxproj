@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0640EEF72262671900C20AAC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0640EEF62262671900C20AAC /* SecondViewController.swift */; };
 		065746CE2276219F001AA97A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 065746CC2276219F001AA97A /* Main.storyboard */; };
 		0670E3F02260FFD000F2A013 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0670E3EF2260FFD000F2A013 /* AppDelegate.swift */; };
 		0670E3F22260FFD000F2A013 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0670E3F12260FFD000F2A013 /* ViewController.swift */; };
@@ -16,6 +15,10 @@
 		0670E4052260FFD200F2A013 /* Math_TrekTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0670E4042260FFD200F2A013 /* Math_TrekTests.swift */; };
 		0670E4102260FFD200F2A013 /* Math_TrekUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0670E40F2260FFD200F2A013 /* Math_TrekUITests.swift */; };
 		06B47E952273995F00D34CBB /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B47E942273995F00D34CBB /* ThirdViewController.swift */; };
+		06FB87642291856700F9D97D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FB87632291856700F9D97D /* SecondViewController.swift */; };
+		06FB8766229186CB00F9D97D /* correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 06FB8765229186CB00F9D97D /* correct.mp3 */; };
+		06FB8768229186D100F9D97D /* wrong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 06FB8767229186D100F9D97D /* wrong.mp3 */; };
+		06FB876B2291A50600F9D97D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06FB876A2291A50600F9D97D /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0640EEF62262671900C20AAC /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		065746CD2276219F001AA97A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0670E3EC2260FFD000F2A013 /* Math Trek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Math Trek.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0670E3EF2260FFD000F2A013 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +53,10 @@
 		0670E40F2260FFD200F2A013 /* Math_TrekUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math_TrekUITests.swift; sourceTree = "<group>"; };
 		0670E4112260FFD200F2A013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06B47E942273995F00D34CBB /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		06FB87632291856700F9D97D /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		06FB8765229186CB00F9D97D /* correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correct.mp3; sourceTree = "<group>"; };
+		06FB8767229186D100F9D97D /* wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wrong.mp3; sourceTree = "<group>"; };
+		06FB876A2291A50600F9D97D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06FB876B2291A50600F9D97D /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +92,7 @@
 				0670E4032260FFD200F2A013 /* Math TrekTests */,
 				0670E40E2260FFD200F2A013 /* Math TrekUITests */,
 				0670E3ED2260FFD000F2A013 /* Products */,
+				06FB87692291A50500F9D97D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,10 +111,12 @@
 			children = (
 				0670E3EF2260FFD000F2A013 /* AppDelegate.swift */,
 				0670E3F12260FFD000F2A013 /* ViewController.swift */,
-				0640EEF62262671900C20AAC /* SecondViewController.swift */,
+				06FB87632291856700F9D97D /* SecondViewController.swift */,
 				06B47E942273995F00D34CBB /* ThirdViewController.swift */,
 				065746CC2276219F001AA97A /* Main.storyboard */,
 				0670E3F62260FFD200F2A013 /* Assets.xcassets */,
+				06FB8765229186CB00F9D97D /* correct.mp3 */,
+				06FB8767229186D100F9D97D /* wrong.mp3 */,
 				0670E3F82260FFD200F2A013 /* LaunchScreen.storyboard */,
 				0670E3FB2260FFD200F2A013 /* Info.plist */,
 			);
@@ -129,6 +139,14 @@
 				0670E4112260FFD200F2A013 /* Info.plist */,
 			);
 			path = "Math TrekUITests";
+			sourceTree = "<group>";
+		};
+		06FB87692291A50500F9D97D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06FB876A2291A50600F9D97D /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,9 +256,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06FB8768229186D100F9D97D /* wrong.mp3 in Resources */,
 				065746CE2276219F001AA97A /* Main.storyboard in Resources */,
 				0670E3FA2260FFD200F2A013 /* LaunchScreen.storyboard in Resources */,
 				0670E3F72260FFD200F2A013 /* Assets.xcassets in Resources */,
+				06FB8766229186CB00F9D97D /* correct.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0640EEF72262671900C20AAC /* SecondViewController.swift in Sources */,
+				06FB87642291856700F9D97D /* SecondViewController.swift in Sources */,
 				0670E3F22260FFD000F2A013 /* ViewController.swift in Sources */,
 				06B47E952273995F00D34CBB /* ThirdViewController.swift in Sources */,
 				0670E3F02260FFD000F2A013 /* AppDelegate.swift in Sources */,
