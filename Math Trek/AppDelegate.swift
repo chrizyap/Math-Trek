@@ -7,15 +7,72 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
-  class AppDelegate: UIResponder, UIApplicationDelegate {
+  class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
+    
+    //Method: - Will register app on APNS to receive token
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        
+        let deviceToken = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
+        print("success in registering for remote notifications with token: \(deviceToken)")
+    }
+    
 
+    //Method: - Failed registration. Explain why
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        
+        print("Failed to register remote notifications: \(error.localizedDescription)")
+        
+    }
+
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert, .sound])
+    }
+    
+    //Function to receive push notification and print result to console
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        print("handling notification")
+        if let notification = response.notification.request.content.userInfo as? [String:AnyObject] {
+            let message = parseRemoteNotification(notification: notification)
+            print(message as Any)
+        }
+        completionHandler()
+    }
+    
+    private func parseRemoteNotification(notification:[String:AnyObject]) -> String? {
+        if let aps = notification["aps"] as? [String:AnyObject] {
+            let alert = aps["alert"] as? String
+            return alert
+        }
+        
+        return nil
+    }
+    
+    
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, openSettingsFor notification: UNNotification?) {
+    
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        UNUserNotificationCenter.current().delegate = self
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+            
+            print("granted: \(granted)")
+        
+       }
+        
+        UIApplication.shared.registerForRemoteNotifications()
+        
+        
         return true
     }
 

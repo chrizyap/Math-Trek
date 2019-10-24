@@ -7,17 +7,20 @@
 //
 import Foundation
 import UIKit
+import GoogleMobileAds
 import AVFoundation
-class SecondViewController: UIViewController{
+import AudioToolbox
+class SecondViewController: UIViewController, GADBannerViewDelegate {
     
-    var soundEffect1 = AVAudioPlayer()
-    var soundEffect2 = AVAudioPlayer()
+    var soundEffect1 : AVAudioPlayer!
+    var soundEffect2 : AVAudioPlayer!
     
 
 
     //Labels
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var banner: GADBannerView!
     
     //Variables
     var countdownTimer : Timer!
@@ -81,13 +84,10 @@ class SecondViewController: UIViewController{
             print("TIMER IS NOT RUNNING")
             performSegue(withIdentifier: "gameOver", sender: self)
             
-            
-            
         }
     }
-    
-    
-    
+
+ 
     func makeQuestion () {
         
         let factor: String!
@@ -127,12 +127,12 @@ class SecondViewController: UIViewController{
     
         rightAnswerPlacement = Int.random(in: 1 ..< 5)
         
-        //Creat a Button
+        //Create a Button
         var button: UIButton = UIButton()
         
         for i in 1...4
         {
-            //Create Button
+            
             button = view.viewWithTag(i) as! UIButton
             
             if (i==Int(rightAnswerPlacement)){
@@ -142,13 +142,28 @@ class SecondViewController: UIViewController{
                 
                 button.setTitle("\(answers.randomElement()!)", for: .normal)
                 
+            //Make sure random wrong answers never equal the correct answer
+               let buttonInt =  Int(button.currentTitle!)
                 
+                if buttonInt == ans {
+                    
+                    button.setTitle("\(answers.randomElement()!)", for: .normal)
+                }
                 
-            }
+             }
+        
         }
         
-        
     }
+    
+    
+    //Shake to Skip Question
+     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+         if event?.subtype == UIEvent.EventSubtype.motionShake{
+             makeQuestion()
+         }
+     }
+     
     
     
     @IBAction func answerPressed(_ sender: Any) {
@@ -158,24 +173,29 @@ class SecondViewController: UIViewController{
             print("correct!")
             makeQuestion()
             score += 1
+            try? AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.ambient)
+            try? AVAudioSession.sharedInstance().setActive(true)
             soundEffect1.play()
         
         }else{
             
             print("wrong!")
             print("score = \(score)")
+            endTimer()
+            try? AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.ambient)
+            try? AVAudioSession.sharedInstance().setActive(true)
             soundEffect2.play()
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             performSegue(withIdentifier: "gameOver", sender: self)
-            
-            
         }
         
-    
+
         if recordData == nil {
             
             let savedString = "\(score)"
             let UserDefaults = Foundation.UserDefaults.standard
             UserDefaults.set(savedString, forKey: "Record")
+            recordData = savedString
             
             
         } else {
@@ -192,34 +212,44 @@ class SecondViewController: UIViewController{
             }
             
         }
-        
+    
     }
     
-
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        // pass data to next view
         let vc = segue.destination as! ThirdViewController
         vc.scoreString =  "\(score)"
         
         if recordData != nil{
             
-        vc.highscoreString = String(recordData)
+            vc.highscoreString = String(recordData)
             
         }
-        
     }
-   
+    
+    
+    
+    
+
  
     override func viewDidLoad() {
         
-        makeQuestion()
-        startTimer()
+   
         
         let userDefaults = Foundation.UserDefaults.standard
         let value = userDefaults.string(forKey: "Record")
         recordData = value
         
+        makeQuestion()
+        startTimer()
+        banner.isHidden = true
+        banner.delegate = self
+        banner.adUnitID = "ca-app-pub-3603864222235662/6305496934"
+        banner.adSize = kGADAdSizeSmartBannerPortrait
+        banner.rootViewController = self
+        banner.load(GADRequest())
         
         let correctSound = Bundle.main.path(forResource: "correct", ofType: "mp3")
         let wrongSound = Bundle.main.path(forResource: "wrong", ofType: "mp3")
@@ -235,6 +265,23 @@ class SecondViewController: UIViewController{
     
  
     }
-
+    
+    
+    /// Tells the delegate an ad request loaded an ad.
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        banner.isHidden = false
+        print("adViewDidReceiveAd")
+    }
+    
+    /// Tells the delegate an ad request failed.
+    func adView(_ bannerView: GADBannerView,
+                didFailToReceiveAdWithError error: GADRequestError) {
+        banner.isHidden = true
+        print("adView:didFailToReceiveAdWithError: \(error.localizedDescription)")
+    }
+        
+        
+        
+       
 
 }

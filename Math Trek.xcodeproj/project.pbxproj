@@ -3,22 +3,32 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		064CAAF122948AF800414E84 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 064CAAF022948AF800414E84 /* GoogleMobileAds.framework */; };
+		064CAAF222948AF800414E84 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 064CAAF022948AF800414E84 /* GoogleMobileAds.framework */; };
+		064CAAF322948AF800414E84 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 064CAAF022948AF800414E84 /* GoogleMobileAds.framework */; };
+		064CAAF5229495CF00414E84 /* click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 064CAAF4229495CF00414E84 /* click.mp3 */; };
+		064CAAF6229495CF00414E84 /* click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 064CAAF4229495CF00414E84 /* click.mp3 */; };
+		064CAAF7229495CF00414E84 /* click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 064CAAF4229495CF00414E84 /* click.mp3 */; };
 		065746CE2276219F001AA97A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 065746CC2276219F001AA97A /* Main.storyboard */; };
 		0670E3F02260FFD000F2A013 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0670E3EF2260FFD000F2A013 /* AppDelegate.swift */; };
 		0670E3F22260FFD000F2A013 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0670E3F12260FFD000F2A013 /* ViewController.swift */; };
 		0670E3F72260FFD200F2A013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0670E3F62260FFD200F2A013 /* Assets.xcassets */; };
-		0670E3FA2260FFD200F2A013 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0670E3F82260FFD200F2A013 /* LaunchScreen.storyboard */; };
 		0670E4052260FFD200F2A013 /* Math_TrekTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0670E4042260FFD200F2A013 /* Math_TrekTests.swift */; };
 		0670E4102260FFD200F2A013 /* Math_TrekUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0670E40F2260FFD200F2A013 /* Math_TrekUITests.swift */; };
 		06B47E952273995F00D34CBB /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B47E942273995F00D34CBB /* ThirdViewController.swift */; };
+		06BBD417229C7BD200D7E417 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06BBD416229C7BD200D7E417 /* GameKit.framework */; };
+		06D79070231DAF4800D605FF /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D7906F231DAF4800D605FF /* Launch Screen.storyboard */; };
 		06FB87642291856700F9D97D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FB87632291856700F9D97D /* SecondViewController.swift */; };
 		06FB8766229186CB00F9D97D /* correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 06FB8765229186CB00F9D97D /* correct.mp3 */; };
 		06FB8768229186D100F9D97D /* wrong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 06FB8767229186D100F9D97D /* wrong.mp3 */; };
 		06FB876B2291A50600F9D97D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06FB876A2291A50600F9D97D /* AVFoundation.framework */; };
+		5736C9E4235F3106580A3681 /* Pods_Math_TrekUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25FE50EA3DFCFE74D239039B /* Pods_Math_TrekUITests.framework */; };
+		8EE9E3221C352717C6574BC1 /* Pods_Math_Trek.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47EDEF12257A9A00EC612522 /* Pods_Math_Trek.framework */; };
+		A96B21355565A18D24A11876 /* Pods_Math_TrekTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C85A2A0E1C78DA46C860D716 /* Pods_Math_TrekTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,12 +49,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0607FE9F23039AF20006F3AE /* Math Trek.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Math Trek.entitlements"; sourceTree = "<group>"; };
+		064CAAF022948AF800414E84 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		064CAAF4229495CF00414E84 /* click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click.mp3; sourceTree = "<group>"; };
 		065746CD2276219F001AA97A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0670E3EC2260FFD000F2A013 /* Math Trek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Math Trek.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0670E3EF2260FFD000F2A013 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0670E3F12260FFD000F2A013 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0670E3F62260FFD200F2A013 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0670E3F92260FFD200F2A013 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0670E3FB2260FFD200F2A013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0670E4002260FFD200F2A013 /* Math TrekTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Math TrekTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0670E4042260FFD200F2A013 /* Math_TrekTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math_TrekTests.swift; sourceTree = "<group>"; };
@@ -53,10 +65,21 @@
 		0670E40F2260FFD200F2A013 /* Math_TrekUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math_TrekUITests.swift; sourceTree = "<group>"; };
 		0670E4112260FFD200F2A013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06B47E942273995F00D34CBB /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		06BBD416229C7BD200D7E417 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		06D7906F231DAF4800D605FF /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		06FB87632291856700F9D97D /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		06FB8765229186CB00F9D97D /* correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correct.mp3; sourceTree = "<group>"; };
 		06FB8767229186D100F9D97D /* wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wrong.mp3; sourceTree = "<group>"; };
 		06FB876A2291A50600F9D97D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		25FE50EA3DFCFE74D239039B /* Pods_Math_TrekUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Math_TrekUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B863E394FB3FA931B28BC75 /* Pods-Math TrekTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Math TrekTests.debug.xcconfig"; path = "Target Support Files/Pods-Math TrekTests/Pods-Math TrekTests.debug.xcconfig"; sourceTree = "<group>"; };
+		336B2560B21477B7A72C5352 /* Pods-Math Trek.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Math Trek.release.xcconfig"; path = "Target Support Files/Pods-Math Trek/Pods-Math Trek.release.xcconfig"; sourceTree = "<group>"; };
+		3DA481EC1CB755795F728EA0 /* Pods-Math Trek.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Math Trek.debug.xcconfig"; path = "Target Support Files/Pods-Math Trek/Pods-Math Trek.debug.xcconfig"; sourceTree = "<group>"; };
+		44171266C8642C443D3A5775 /* Pods-Math TrekUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Math TrekUITests.release.xcconfig"; path = "Target Support Files/Pods-Math TrekUITests/Pods-Math TrekUITests.release.xcconfig"; sourceTree = "<group>"; };
+		47EDEF12257A9A00EC612522 /* Pods_Math_Trek.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Math_Trek.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		614BA5A2D8A7F433EB65C806 /* Pods-Math TrekUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Math TrekUITests.debug.xcconfig"; path = "Target Support Files/Pods-Math TrekUITests/Pods-Math TrekUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6E033D6876765CC572F30DB7 /* Pods-Math TrekTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Math TrekTests.release.xcconfig"; path = "Target Support Files/Pods-Math TrekTests/Pods-Math TrekTests.release.xcconfig"; sourceTree = "<group>"; };
+		C85A2A0E1C78DA46C860D716 /* Pods_Math_TrekTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Math_TrekTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +87,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06BBD417229C7BD200D7E417 /* GameKit.framework in Frameworks */,
+				064CAAF122948AF800414E84 /* GoogleMobileAds.framework in Frameworks */,
 				06FB876B2291A50600F9D97D /* AVFoundation.framework in Frameworks */,
+				8EE9E3221C352717C6574BC1 /* Pods_Math_Trek.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +98,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				064CAAF222948AF800414E84 /* GoogleMobileAds.framework in Frameworks */,
+				A96B21355565A18D24A11876 /* Pods_Math_TrekTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +107,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				064CAAF322948AF800414E84 /* GoogleMobileAds.framework in Frameworks */,
+				5736C9E4235F3106580A3681 /* Pods_Math_TrekUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,11 +118,13 @@
 		0670E3E32260FFD000F2A013 = {
 			isa = PBXGroup;
 			children = (
+				064CAAF022948AF800414E84 /* GoogleMobileAds.framework */,
 				0670E3EE2260FFD000F2A013 /* Math Trek */,
 				0670E4032260FFD200F2A013 /* Math TrekTests */,
 				0670E40E2260FFD200F2A013 /* Math TrekUITests */,
 				0670E3ED2260FFD000F2A013 /* Products */,
 				06FB87692291A50500F9D97D /* Frameworks */,
+				403E45C7BDC7B5231DD18766 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,15 +141,17 @@
 		0670E3EE2260FFD000F2A013 /* Math Trek */ = {
 			isa = PBXGroup;
 			children = (
+				0607FE9F23039AF20006F3AE /* Math Trek.entitlements */,
 				0670E3EF2260FFD000F2A013 /* AppDelegate.swift */,
 				0670E3F12260FFD000F2A013 /* ViewController.swift */,
 				06FB87632291856700F9D97D /* SecondViewController.swift */,
 				06B47E942273995F00D34CBB /* ThirdViewController.swift */,
 				065746CC2276219F001AA97A /* Main.storyboard */,
+				06D7906F231DAF4800D605FF /* Launch Screen.storyboard */,
 				0670E3F62260FFD200F2A013 /* Assets.xcassets */,
 				06FB8765229186CB00F9D97D /* correct.mp3 */,
 				06FB8767229186D100F9D97D /* wrong.mp3 */,
-				0670E3F82260FFD200F2A013 /* LaunchScreen.storyboard */,
+				064CAAF4229495CF00414E84 /* click.mp3 */,
 				0670E3FB2260FFD200F2A013 /* Info.plist */,
 			);
 			path = "Math Trek";
@@ -144,9 +178,26 @@
 		06FB87692291A50500F9D97D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				06BBD416229C7BD200D7E417 /* GameKit.framework */,
 				06FB876A2291A50600F9D97D /* AVFoundation.framework */,
+				47EDEF12257A9A00EC612522 /* Pods_Math_Trek.framework */,
+				C85A2A0E1C78DA46C860D716 /* Pods_Math_TrekTests.framework */,
+				25FE50EA3DFCFE74D239039B /* Pods_Math_TrekUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		403E45C7BDC7B5231DD18766 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3DA481EC1CB755795F728EA0 /* Pods-Math Trek.debug.xcconfig */,
+				336B2560B21477B7A72C5352 /* Pods-Math Trek.release.xcconfig */,
+				2B863E394FB3FA931B28BC75 /* Pods-Math TrekTests.debug.xcconfig */,
+				6E033D6876765CC572F30DB7 /* Pods-Math TrekTests.release.xcconfig */,
+				614BA5A2D8A7F433EB65C806 /* Pods-Math TrekUITests.debug.xcconfig */,
+				44171266C8642C443D3A5775 /* Pods-Math TrekUITests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,9 +207,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0670E4142260FFD200F2A013 /* Build configuration list for PBXNativeTarget "Math Trek" */;
 			buildPhases = (
+				B77AD6502D292644362DCC42 /* [CP] Check Pods Manifest.lock */,
 				0670E3E82260FFD000F2A013 /* Sources */,
 				0670E3E92260FFD000F2A013 /* Frameworks */,
 				0670E3EA2260FFD000F2A013 /* Resources */,
+				2466083A6A59ECEFBA6C3D90 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -173,6 +226,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0670E4172260FFD200F2A013 /* Build configuration list for PBXNativeTarget "Math TrekTests" */;
 			buildPhases = (
+				2CAEA61FC0E846A925A9B6CD /* [CP] Check Pods Manifest.lock */,
 				0670E3FC2260FFD200F2A013 /* Sources */,
 				0670E3FD2260FFD200F2A013 /* Frameworks */,
 				0670E3FE2260FFD200F2A013 /* Resources */,
@@ -191,6 +245,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0670E41A2260FFD200F2A013 /* Build configuration list for PBXNativeTarget "Math TrekUITests" */;
 			buildPhases = (
+				348724F87EBC5869C9FCED4D /* [CP] Check Pods Manifest.lock */,
 				0670E4072260FFD200F2A013 /* Sources */,
 				0670E4082260FFD200F2A013 /* Frameworks */,
 				0670E4092260FFD200F2A013 /* Resources */,
@@ -218,6 +273,14 @@
 					0670E3EB2260FFD000F2A013 = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1020;
+						SystemCapabilities = {
+							com.apple.GameCenter.iOS = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					0670E3FF2260FFD200F2A013 = {
 						CreatedOnToolsVersion = 10.1;
@@ -256,9 +319,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06D79070231DAF4800D605FF /* Launch Screen.storyboard in Resources */,
 				06FB8768229186D100F9D97D /* wrong.mp3 in Resources */,
 				065746CE2276219F001AA97A /* Main.storyboard in Resources */,
-				0670E3FA2260FFD200F2A013 /* LaunchScreen.storyboard in Resources */,
+				064CAAF5229495CF00414E84 /* click.mp3 in Resources */,
 				0670E3F72260FFD200F2A013 /* Assets.xcassets in Resources */,
 				06FB8766229186CB00F9D97D /* correct.mp3 in Resources */,
 			);
@@ -268,6 +332,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				064CAAF6229495CF00414E84 /* click.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,10 +340,97 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				064CAAF7229495CF00414E84 /* click.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2466083A6A59ECEFBA6C3D90 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Math Trek/Pods-Math Trek-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Math Trek/Pods-Math Trek-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Math Trek/Pods-Math Trek-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2CAEA61FC0E846A925A9B6CD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Math TrekTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		348724F87EBC5869C9FCED4D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Math TrekUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B77AD6502D292644362DCC42 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Math Trek-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0670E3E82260FFD000F2A013 /* Sources */ = {
@@ -330,14 +482,6 @@
 				065746CD2276219F001AA97A /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		0670E3F82260FFD200F2A013 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0670E3F92260FFD200F2A013 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -461,17 +605,25 @@
 		};
 		0670E4152260FFD200F2A013 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DA481EC1CB755795F728EA0 /* Pods-Math Trek.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Math Trek/Math Trek.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = FYFN99S5JE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Math Trek/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Internet-Kids.Math-Trek";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -482,17 +634,25 @@
 		};
 		0670E4162260FFD200F2A013 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 336B2560B21477B7A72C5352 /* Pods-Math Trek.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Math Trek/Math Trek.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = FYFN99S5JE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Math Trek/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Internet-Kids.Math-Trek";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -503,11 +663,16 @@
 		};
 		0670E4182260FFD200F2A013 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B863E394FB3FA931B28BC75 /* Pods-Math TrekTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FYFN99S5JE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Math TrekTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -524,11 +689,16 @@
 		};
 		0670E4192260FFD200F2A013 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E033D6876765CC572F30DB7 /* Pods-Math TrekTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FYFN99S5JE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Math TrekTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -545,10 +715,15 @@
 		};
 		0670E41B2260FFD200F2A013 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 614BA5A2D8A7F433EB65C806 /* Pods-Math TrekUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FYFN99S5JE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Math TrekUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -565,10 +740,15 @@
 		};
 		0670E41C2260FFD200F2A013 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44171266C8642C443D3A5775 /* Pods-Math TrekUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FYFN99S5JE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Math TrekUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
